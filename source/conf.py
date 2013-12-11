@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Shinken Manual'
-copyright = u'2013, Thibault Cohen'
+copyright = u'2013, Shinken Team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -184,7 +184,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'Shinken.tex', u'Shinken Documentation',
-   u'Thibault Cohen', 'manual'),
+   u'Shinken Team', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -214,7 +214,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'shinken', u'Shinken Documentation',
-     [u'Thibault Cohen'], 1)
+     [u'Shinken Team'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -228,7 +228,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'Shinken', u'Shinken Documentation',
-   u'Thibault Cohen', 'Shinken', 'One line description of project.',
+   u'Shinken Team', 'Shinken', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -246,9 +246,9 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'Shinken'
-epub_author = u'Thibault Cohen'
-epub_publisher = u'Thibault Cohen'
-epub_copyright = u'2013, Thibault Cohen'
+epub_author = u'Shinken Team'
+epub_publisher = u'Shinken Team'
+epub_copyright = u'2013, Shinken Team'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
