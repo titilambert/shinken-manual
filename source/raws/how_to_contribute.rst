@@ -60,7 +60,7 @@ Resources for developers and power users
     * Development - The forums are also a good medium to discuss issues ` Support Forums`_
     * Development - Developer Mailing list - `Register or search the shinken-devel Mailing list`_
 
-For bug hunting and programming, you will need to look at the “How to hacking” tutorial page.
+For bug hunting and programming, you will need to look at the “How to hacking" tutorial page.
 
 GitHub offers great facilities to fork, test, commit, review and comment anything related to Shinken. You can also follow the projects progress in real time.
 

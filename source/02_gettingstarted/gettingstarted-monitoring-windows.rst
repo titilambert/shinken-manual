@@ -182,7 +182,7 @@ Add a new :ref:`host <configuringshinken/configobjects/host>` definition for the
   
 Good. Now you can add some service definitions (to the same configuration file) in order to tell Shinken to monitor different aspects of the Windows machine. If this is the *first* Windows machine you're monitoring, you can simply modify the sample service definitions in "windows.cfg".
 
-Replace “"*"winserver"*"” in the example definitions below with the name you specified in the "host_name" directive of the host definition you just added.
+Replace “"*"winserver"*"" in the example definitions below with the name you specified in the "host_name" directive of the host definition you just added.
 
 Add the following service definition to monitor the version of the NSClient++ addon that is running on the Windows server. This is useful when it comes time to upgrade your Windows servers to a newer version of the addon, as you'll be able to tell which Windows machines still need to be upgraded to the latest version of NSClient++.
 

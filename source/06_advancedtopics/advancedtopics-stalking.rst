@@ -26,7 +26,25 @@ Under normal circumstances, the result of a host or service check is only logged
 
 If you enable stalking for one or more states of a particular host or service, Shinken will log the results of the host or service check if the output from the check differs from the output from the previous check. Take the following example of eight consecutive checks of a service:
 
-^ Service Check #: ^ Service State: ^ Service Check Output: ^ Logged Normally ^ Logged With Stalking ^
+
+
+================ ============== =============================================================================== ============================================================================= ==========================================================================
+Service Check #: Service State: Service Check Output:                                                           Logged Normally                                                               Logged With Stalking                                                      
+x                OK             RAID array optimal                                                              -                                                                             -                                                                         
+x+1              OK             RAID array optimal                                                              -                                                                             -                                                                         
+x+2              WARNING        RAID array degraded (1 drive bad, 1 hot spare rebuilding)                       .. image:: /_static/images///official/images/checkmark.png}} 
+   :scale: 90 % .. image:: /_static/images///official/images/checkmark.png
+   :scale: 90 %
+x+3              CRITICAL       RAID array degraded (2 drives bad, 1 host spare online, 1 hot spare rebuilding) .. image:: /_static/images///official/images/checkmark.png}} 
+   :scale: 90 % .. image:: /_static/images///official/images/checkmark.png
+   :scale: 90 %
+x+4              CRITICAL       RAID array degraded (3 drives bad, 2 hot spares online)                         -                                                                             .. image:: /_static/images///official/images/checkmark.png
+   :scale: 90 %
+x+5              CRITICAL       RAID array failed                                                               -                                                                             .. image:: /_static/images///official/images/checkmark.png
+   :scale: 90 %
+x+6              CRITICAL       RAID array failed                                                               -                                                                             -                                                                         
+x+7              CRITICAL       RAID array failed                                                               -                                                                             -                                                                         
+================ ============== =============================================================================== ============================================================================= ==========================================================================
 
 Given this sequence of checks, you would normally only see two log entries for this catastrophe. The first one would occur at service check x+2 when the service changed from an OK state to a WARNING state. The second log entry would occur at service check x+3 when the service changed from a WARNING state to a CRITICAL state.
 

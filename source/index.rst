@@ -17,10 +17,11 @@ Contents:
    04_runningshinken/index
    05_thebasics/index
    06_advancedtopics/index
-   07_securityandperformancetuning/index
-   08_integrationwithothersoftware/index
-   09_shinkenaddons/index
-   10_development/index
+   07_configobjects/index
+   08_securityandperformancetuning/index
+   09_integrationwithothersoftware/index
+   10_shinkenaddons/index
+   11_development/index
 
 
 

@@ -14,7 +14,7 @@ Introduction
 =============
 
 
-Shinken supports optional detection of hosts and services that are “flapping”. Flapping occurs when a service or host changes state too frequently, resulting in a storm of problem and recovery notifications. Flapping can be indicative of configuration problems (i.e. thresholds set too low), troublesome services, or real network problems.
+Shinken supports optional detection of hosts and services that are “flapping". Flapping occurs when a service or host changes state too frequently, resulting in a storm of problem and recovery notifications. Flapping can be indicative of configuration problems (i.e. thresholds set too low), troublesome services, or real network problems.
 
 
 
@@ -111,7 +111,13 @@ Shinken uses several variables to determine the percent state change thresholds 
 
 The table below shows the global and host- or service-specific variables that control the various thresholds used in flap detection.
 
-^ Object Type ^ Global Variables ^ Object-Specific Variables ^
+
+
+=========== ======================================================================================================================================================================================================================================================= ==========================================================================================================================================
+Object Type Global Variables                                                                                                                                                                                                                                        Object-Specific Variables                                                                                                                 
+Host        :ref:`low_host_flap_threshold <configuringshinken-configmain#configuringshinken-configmain-low_host_flap_threshold>` :ref:`high_host_flap_threshold <configuringshinken-configmain#configuringshinken-configmain-high_host_flap_threshold>`             :ref:`low_flap_threshold <configuringshinken/configobjects/host>` :ref:`high_flap_threshold <configuringshinken/configobjects/host>`      
+Service     :ref:`low_service_flap_threshold <configuringshinken-configmain#configuringshinken-configmain-low_service_flap_threshold>` :ref:`high_service_flap_threshold <configuringshinken-configmain#configuringshinken-configmain-high_service_flap_threshold>` :ref:`low_flap_threshold <configuringshinken/configobjects/service>` :ref:`high_flap_threshold <configuringshinken/configobjects/service>`
+=========== ======================================================================================================================================================================================================================================================= ==========================================================================================================================================
 
 
 

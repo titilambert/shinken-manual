@@ -71,9 +71,19 @@ Custom Variables As Macros
 
 Custom variable values can be referenced in scripts and executables that Nagios runs for checks, notifications, etc. by using :ref:`macros <thebasics-macros>` or environment variables.
 
-In order to prevent name collision among custom variables from different object types, Nagios prepends “_HOST”, “_SERVICE”, or “_CONTACT” to the beginning of custom host, service, or contact variables, respectively, in macro and environment variable names. The table below shows the corresponding macro and environment variable names for the custom variables that were defined in the example above.
+In order to prevent name collision among custom variables from different object types, Nagios prepends “_HOST", “_SERVICE", or “_CONTACT" to the beginning of custom host, service, or contact variables, respectively, in macro and environment variable names. The table below shows the corresponding macro and environment variable names for the custom variables that were defined in the example above.
 
-^ Object Type ^ Variable Name ^ Macro Name ^ Environment Variable ^
+
+
+=========== ============== ======================== =============================
+Object Type Variable Name  Macro Name               Environment Variable         
+Host        MAC_ADDRESS    $_HOSTMAC_ADDRESS$       NAGIOS__HOSTMAC_ADDRESS      
+Host        RACK_NUMBER    $_HOSTRACK_NUMBER$       NAGIOS__HOSTRACK_NUMBER      
+Service     SNMP_COMMUNITY $_SERVICESNMP_COMMUNITY$ NAGIOS__SERVICESNMP_COMMUNITY
+Service     TECHCONTACT    $_SERVICETECHCONTACT$    NAGIOS__SERVICETECHCONTACT   
+Contact     AIM_USERNAME   $_CONTACTAIM_USERNAME$   NAGIOS__CONTACTAIM_USERNAME  
+Contact     YAHOOID        $_CONTACTYAHOOID$        NAGIOS__CONTACTYAHOOID       
+=========== ============== ======================== =============================
 
 
 

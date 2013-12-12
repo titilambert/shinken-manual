@@ -34,10 +34,13 @@ About Nokia N900
 The smartphone Nokia N900 runs natively under the Maemo Operating System (which includes python 2.5.4). You can find more information about it at :
 http://maemo.org/intro/ and http://maemo.nokia.com/
 
-<note tip>You will need an internet connection to continu, don't forget to take care of your 3G data quota!\\
-It's easier to do it via ssh.\\
-And you will need of a tool like gainroot or rootsh to complete the following steps.</note>
+  
+::
 
+   .. tip:: You will need an internet connection to continu, don't forget to take care of your 3G data quota!\\
+   It's easier to do it via ssh.\\
+   And you will need of a tool like gainroot or rootsh to complete the following steps.
+  
 Create users :
   
 ::
@@ -94,4 +97,7 @@ You can test an see what happen :
 
 That's all! But for installation only! You need now to configure shinken.
 
-<note important>And don't forget to take care of your 3G data quota!!</note>
+  
+::
+
+   .. important:: And don't forget to take care of your 3G data quota!!

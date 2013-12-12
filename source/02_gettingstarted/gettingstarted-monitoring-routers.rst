@@ -76,8 +76,11 @@ To make your life a bit easier, a few configuration tasks have already been done
 
 The above-mentioned config files can be found in the "/etc/shinken/objects/" directory. You can modify the definitions in these and other definitions to suit your needs better if you'd like. However, I'd recommend waiting until you're more familiar with configuring Shinken before doing so. For the time being, just follow the directions outlined below and you'll be monitoring your network routers/switches in no time.
 
-<note important>The commands are in fact not included yet in commands.cfg</note>
+  
+::
 
+   .. important:: The commands are in fact not included yet in commands.cfg
+  
 
 
 Prerequisites 
@@ -156,7 +159,7 @@ Monitoring Services
 
 Now you can add some service definitions (to the same configuration file) to monitor different aspects of the switch. If this is the *first* switch you're monitoring, you can simply modify the sample service definition in "switch.cfg".
 
-Replace “*"linksys-srw224p"*” in the example definitions below with the name you specified in the "host_name" directive of the host definition you just added.
+Replace “*"linksys-srw224p"*" in the example definitions below with the name you specified in the "host_name" directive of the host definition you just added.
 
 
 
@@ -178,7 +181,43 @@ Add the following service definition in order to monitor packet loss and round t
      retry_check_interval   1
   }
   
-  
+| 
+
+.. image:: /_static/images///official/images//callouts/1.png
+   :scale: 90 %
+
+ | Inherit values from a template |
+| 
+
+.. image:: /_static/images///official/images//callouts/2.png
+   :scale: 90 %
+
+ | The name of the host the service is associated with |
+| 
+
+.. image:: /_static/images///official/images//callouts/3.png
+   :scale: 90 %
+
+ | The service description |
+| 
+
+.. image:: /_static/images///official/images//callouts/4.png
+   :scale: 90 %
+
+ | The command used to monitor the service |
+| 
+
+.. image:: /_static/images///official/images//callouts/5.png
+   :scale: 90 %
+
+ | Check the service every 5 minutes under normal conditions |
+| 
+
+.. image:: /_static/images///official/images//callouts/6.png
+   :scale: 90 %
+
+ | Re-check the service every minute until its final/hard state is determined |
+
 This service will be:
 
   * CRITICAL if the round trip average (RTA) is greater than 600 milliseconds or the packet loss is 60% or more
@@ -223,7 +262,7 @@ In the example above, the "-o ifOperStatus.1" refers to the OID for the operatio
 
 The "-r 1" option tells the **check_snmp** plugin to return an OK state if "1" is found in the "SNMP" result (1 indicates an "up" state on the port) and CRITICAL if it isn't found.
 
-The "-m RFC1213-MIB" is optional and tells the **check_snmp** plugin to only load the “RFC1213-MIB” instead of every single MIB that's installed on your system, which can help speed things up.
+The "-m RFC1213-MIB" is optional and tells the **check_snmp** plugin to only load the “RFC1213-MIB" instead of every single MIB that's installed on your system, which can help speed things up.
 
 That's it for the "SNMP" monitoring example. There are a million things that can be monitored via "SNMP", so its up to you to decide what you need and want to monitor. Good luck!
 

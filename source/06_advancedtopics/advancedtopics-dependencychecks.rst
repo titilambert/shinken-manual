@@ -8,7 +8,10 @@
 ==============================
 
 
-<note>The predictive dependency check functionality is not managed from now in Shinken.</note>
+  
+::
+
+   .. note:: The predictive dependency check functionality is not managed from now in Shinken.
 
 
 Introduction 

@@ -83,11 +83,25 @@ Host checks are performed by :ref:`plugins <thebasics-plugins>`, which can retur
 
 The table below shows how plugin return codes correspond with preliminary host states. Some post-processing (which is described later) is done which may then alter the final host state.
 
-^ Plugin Result ^ Preliminary Host State ^
+
+
+============= ======================
+Plugin Result Preliminary Host State
+OK            UP                    
+WARNING       DOWN*                 
+UNKNOWN       DOWN                  
+CRITICAL      DOWN                  
+============= ======================
 
 If the preliminary host state is DOWN, Shinken will attempt to see if the host is really DOWN or if it is UNREACHABLE. The distinction between DOWN and UNREACHABLE host states is important, as it allows admins to determine root cause of network outages faster. The following table shows how Shinken makes a final state determination based on the state of the hosts parent(s). A host's parents are defined in the parents directive in host definition.
 
-^ Preliminary Host State ^ Parent Host State ^ Final Host State ^
+
+
+====================== ========================================== ================
+Preliminary Host State Parent Host State                          Final Host State
+DOWN                   At least one parent is UP                  DOWN            
+DOWN                   All parents are either DOWN or UNREACHABLE UNREACHABLE     
+====================== ========================================== ================
 
 More information on how Shinken distinguishes between DOWN and UNREACHABLE states can be found :ref:`here <thebasics-networkreachability>`.
 
@@ -99,5 +113,5 @@ Host State Changes
 
 As you are probably well aware, hosts don't always stay in one state. Things break, patches get applied, and servers need to be rebooted. When Shinken checks the status of hosts, it will be able to detect when a host changes between UP, DOWN, and UNREACHABLE states and take appropriate action. These state changes result in different :ref:`state types <thebasics-statetypes>` (HARD or SOFT), which can trigger :ref:`event handlers <advancedtopics-eventhandlers>` to be run and :ref:`notifications <thebasics-notifications>` to be sent out. Detecting and dealing with state changes is what Shinken is all about.
 
-When hosts change state too frequently they are considered to be “flapping”. A good example of a flapping host would be server that keeps spontaneously rebooting as soon as the operating system loads. That's always a fun scenario to have to deal with. Shinken can detect when hosts start flapping, and can suppress notifications until flapping stops and the host's state stabilizes. More information on the flap detection logic can be found :ref:`here <advancedtopics-flapping>`.
+When hosts change state too frequently they are considered to be “flapping". A good example of a flapping host would be server that keeps spontaneously rebooting as soon as the operating system loads. That's always a fun scenario to have to deal with. Shinken can detect when hosts start flapping, and can suppress notifications until flapping stops and the host's state stabilizes. More information on the flap detection logic can be found :ref:`here <advancedtopics-flapping>`.
 

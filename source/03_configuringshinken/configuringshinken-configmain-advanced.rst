@@ -5,9 +5,12 @@
 Tuning and advanced parameters 
 -------------------------------
 
-<note important>If you do not know how to change the values of theses parameters, don't touch them :)
-(and ask for help on the mailing list).</note>
+  
+::
 
+   .. important:: If you do not know how to change the values of theses parameters, don't touch them :)
+   (and ask for help on the mailing list).
+  
 
 
 Performance data parameters 
@@ -357,9 +360,12 @@ Example:
   
 This option determines the maximum amount of time (in seconds) that the state of a previous host check is considered current. Cached host states (from host/service checks that were performed more recently than the time specified by this value) can improve host check performance immensely. Too high of a value for this option may result in (temporarily) inaccurate host/service states, while a low value may result in a performance hit for host/service checks. Use a value of 0 if you want to disable host/service check caching. More information on cached checks can be found :ref:`here <advancedtopics-cachedchecks>`.
 
-<note tip>Nagios default is 15s, but it's a tweak that make checks less accurate. So Shinken use 0s as a default. If you have performances problems and you can't add a new scheduler or poller, increase this value and start to buy a new server because this won't be magical.</note>
+  
+::
 
-
+   .. tip:: Nagios default is 15s, but it's a tweak that make checks less accurate. So Shinken use 0s as a default. If you have performances problems and you can't add a new scheduler or poller, increase this value and start to buy a new server because this won't be magical.
+  
+  
 
 
 Large Installation Tweaks Option 
@@ -427,7 +433,7 @@ Example:
 
   enable_flap_detection=1
   
-This option determines whether or not Shinken will try and detect hosts and services that are “flapping”. Flapping occurs when a host or service changes between states too frequently, resulting in a barrage of notifications being sent out. When Shinken detects that a host or service is flapping, it will temporarily suppress notifications for that host/service until it stops flapping.
+This option determines whether or not Shinken will try and detect hosts and services that are “flapping". Flapping occurs when a host or service changes between states too frequently, resulting in a barrage of notifications being sent out. When Shinken detects that a host or service is flapping, it will temporarily suppress notifications for that host/service until it stops flapping.
 
 More information on how flap detection and handling works can be found :ref:`here <advancedtopics-flapping>`.
 
@@ -574,7 +580,7 @@ Example:
 
   obsess_over_services=1
   
-This value determines whether or not Shinken will “obsess” over service checks results and run the :ref:`obsessive compulsive service processor command <configuringshinken-configmain#configuringshinken-configmain-ocsp_command>` you define. I know - funny name, but it was all I could think of. This option is useful for performing :ref:`distributed monitoring <advancedtopics-distributed>`. If you're not doing distributed monitoring, don't enable this option.
+This value determines whether or not Shinken will “obsess" over service checks results and run the :ref:`obsessive compulsive service processor command <configuringshinken-configmain#configuringshinken-configmain-ocsp_command>` you define. I know - funny name, but it was all I could think of. This option is useful for performing :ref:`distributed monitoring <advancedtopics-distributed>`. If you're not doing distributed monitoring, don't enable this option.
 
   * 0 = Don't obsess over services (default)
   * 1 = Obsess over services
@@ -609,7 +615,7 @@ Example:
 
   obsess_over_hosts=1
   
-This value determines whether or not Shinken will “obsess” over host checks results and run the :ref:`obsessive compulsive host processor command <configuringshinken-configmain#configuringshinken-configmain-ochp_command>` you define. Same like the service one but for hosts :)
+This value determines whether or not Shinken will “obsess" over host checks results and run the :ref:`obsessive compulsive host processor command <configuringshinken-configmain#configuringshinken-configmain-ochp_command>` you define. Same like the service one but for hosts :)
 
   * 0 = Don't obsess over hosts (default)
   * 1 = Obsess over hosts
@@ -661,7 +667,7 @@ Example:
   check_service_freshness=0
   check_host_freshness=0
   
-This option determines whether or not Shinken will periodically check the “freshness” of host/service checks. Enabling this option is useful for helping to ensure that :ref:`passive service checks <thebasics-passivechecks>` are received in a timely manner. More information on freshness checking can be found :ref:`here <advancedtopics-freshness>`.
+This option determines whether or not Shinken will periodically check the “freshness" of host/service checks. Enabling this option is useful for helping to ensure that :ref:`passive service checks <thebasics-passivechecks>` are received in a timely manner. More information on freshness checking can be found :ref:`here <advancedtopics-freshness>`.
 
   * 0 = Don't check host/service freshness
   * 1 = Check host/service freshness (default)
@@ -685,7 +691,7 @@ Example:
   service_freshness_check_interval=60
   host_freshness_check_interval=60
   
-This setting determines how often (in seconds) Shinken will periodically check the “freshness” of host/service check results. If you have disabled host/service freshness checking (with the :ref:`check_service_freshness <configuringshinken-configmain#configuringshinken-configmain-check_service_freshness>` option), this option has no effect. More information on freshness checking can be found :ref:`here <advancedtopics-freshness>`.
+This setting determines how often (in seconds) Shinken will periodically check the “freshness" of host/service check results. If you have disabled host/service freshness checking (with the :ref:`check_service_freshness <configuringshinken-configmain#configuringshinken-configmain-check_service_freshness>` option), this option has no effect. More information on freshness checking can be found :ref:`here <advancedtopics-freshness>`.
 
 
 
@@ -730,7 +736,15 @@ Example:
   
 This option allows you to specify what kind of date/time format Shinken should use in date/time :ref:`macros <thebasics-macros>`. Possible options (along with example output) include:
 
-^ Option ^ Output Format ^ Sample Output ^
+
+
+============== =================== ===================
+Option         Output Format       Sample Output      
+us             MM/DD/YYYY HH:MM:SS 06/30/2002 03:15:00
+euro           DD/MM/YYYY HH:MM:SS 30/06/2002 03:15:00
+iso8601        YYYY-MM-DD HH:MM:SS 2002-06-30 03:15:00
+strict-iso8601 YYYY-MM-DDTHH:MM:SS 2002-06-30T03:15:00
+============== =================== ===================
 
 
 

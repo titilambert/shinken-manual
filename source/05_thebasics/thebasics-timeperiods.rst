@@ -9,7 +9,7 @@
 
 **Abstract**
 
-or...“Is This a Good Time?”
+or...“Is This a Good Time?"
 
 
 
@@ -56,7 +56,7 @@ Host and service definitions have an optional "check_period" directive that allo
 
 If you do not use the "check_period directive" to specify a timeperiod, Shinken will be able to schedule active checks of the host or service anytime it needs to. This is essentially a 24x7 monitoring scenario.
 
-Specifying a timeperiod in the "check_period directive" allows you to restrict the time that Shinken perform regularly scheduled, active checks of the host or service. When Shinken attempts to reschedule a host or service check, it will make sure that the next check falls within a valid time range within the defined timeperiod. If it doesn't, Shinken will adjust the next check time to coincide with the next “valid” time in the specified timeperiod. This means that the host or service may not get checked again for another hour, day, or week, etc.
+Specifying a timeperiod in the "check_period directive" allows you to restrict the time that Shinken perform regularly scheduled, active checks of the host or service. When Shinken attempts to reschedule a host or service check, it will make sure that the next check falls within a valid time range within the defined timeperiod. If it doesn't, Shinken will adjust the next check time to coincide with the next “valid" time in the specified timeperiod. This means that the host or service may not get checked again for another hour, day, or week, etc.
 
 On-demand checks and passive checks are not restricted by the timeperiod you specify in the "check_period directive". Only regularly scheduled active checks are restricted.
 
@@ -76,7 +76,7 @@ How Time Periods Work With Contact Notifications
 
 By specifying a timeperiod in the "notification_period" directive of a host or service definition, you can control when Shinken is allowed to send notifications out regarding problems or recoveries for that host or service. When a host notification is about to get sent out, Shinken will make sure that the current time is within a valid range in the "notification_period" timeperiod. If it is a valid time, then Shinken will attempt to notify each contact of the problem or recovery.
 
-You can also use timeperiods to control when notifications can be sent out to individual contacts. By using the "service_notification_period" and "host_notification_period" directives in :ref:`contact definitions <configuringshinken/configobjects/contact>`, you're able to essentially define an “on call” period for each contact. Contacts will only receive host and service notifications during the times you specify in the notification period directives.
+You can also use timeperiods to control when notifications can be sent out to individual contacts. By using the "service_notification_period" and "host_notification_period" directives in :ref:`contact definitions <configuringshinken/configobjects/contact>`, you're able to essentially define an “on call" period for each contact. Contacts will only receive host and service notifications during the times you specify in the notification period directives.
 
 Examples of how to create timeperiod definitions for use for on-call rotations can be found :ref:`here <advancedtopics-oncallrotation>`.
 

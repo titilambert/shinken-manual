@@ -82,5 +82,5 @@ Services State Changes
 
 When Shinken checks the status of services, it will be able to detect when a service changes between OK, WARNING, UNKNOWN, and CRITICAL states and take appropriate action. These state changes result in different :ref:`state types <thebasics-statetypes>` (HARD or SOFT), which can trigger :ref:`event handlers <advancedtopics-eventhandlers>` to be run and :ref:`notifications <thebasics-notifications>` to be sent out. Service state changes can also trigger on-demand :ref:`host checks <thebasics-hostchecks>`. Detecting and dealing with state changes is what Shinken is all about.
 
-When services change state too frequently they are considered to be “flapping”. Shinken can detect when services start flapping, and can suppress notifications until flapping stops and the service's state stabilizes. More information on the flap detection logic can be found :ref:`here <advancedtopics-flapping>`.
+When services change state too frequently they are considered to be “flapping". Shinken can detect when services start flapping, and can suppress notifications until flapping stops and the service's state stabilizes. More information on the flap detection logic can be found :ref:`here <advancedtopics-flapping>`.
 

@@ -9,7 +9,7 @@
 
 **Abstract**
 
-This document describes how you can monitor publicly available services, applications and protocols. By “public” I mean services that are accessible across the network - either the local network or the greater Internet. Examples of public services include "HTTP", "POP3", "IMAP", "FTP", and "SSH". There are many more public services that you probably use on a daily basis. These services and applications, as well as their underlying protocols, can usually be monitored by Shinken without any special access requirements.
+This document describes how you can monitor publicly available services, applications and protocols. By “public" I mean services that are accessible across the network - either the local network or the greater Internet. Examples of public services include "HTTP", "POP3", "IMAP", "FTP", and "SSH". There are many more public services that you probably use on a daily basis. These services and applications, as well as their underlying protocols, can usually be monitored by Shinken without any special access requirements.
 
 
 
@@ -149,7 +149,7 @@ A simple service definition for monitoring the "FTP" server on *remotehost* woul
   
 This service definition will monitor the "FTP" service and generate alerts if the "FTP" server doesn't respond within 10 seconds.
 
-A more advanced service definition is shown below. This service will check the "FTP" server running on port 1023 on *remotehost*. It will generate an alert if the server doesn't respond within 5 seconds or if the server response doesn't contain the string “Pure-FTPd [TLS]”.
+A more advanced service definition is shown below. This service will check the "FTP" server running on port 1023 on *remotehost*. It will generate an alert if the server doesn't respond within 5 seconds or if the server response doesn't contain the string “Pure-FTPd [TLS]".
 
   
 ::
@@ -191,7 +191,7 @@ A simple service definition for monitoring the "SSH" server on *remotehost* woul
   
 This service definition will monitor the "SSH" service and generate alerts if the "SSH" server doesn't respond within 10 seconds.
 
-A more advanced service definition is shown below. This service will check the "SSH" server and generate an alert if the server doesn't respond within 5 seconds or if the server version string string doesn't match “OpenSSH_4.2”.
+A more advanced service definition is shown below. This service will check the "SSH" server and generate an alert if the server doesn't respond within 5 seconds or if the server version string string doesn't match “OpenSSH_4.2".
 
   
 ::
@@ -317,7 +317,7 @@ A simple service definition for monitoring the "IMAP4" service on *remotehost* w
   
 This service definition will monitor the "IMAP4" service and generate alerts if the "IMAP" server doesn't respond within 10 seconds.
 
-A more advanced service definition is shown below. This service will check the IAMP4 service and generate an alert if the server doesn't respond within 5 seconds or if the response from the server doesn't contain “mygreatmailserver.com”.
+A more advanced service definition is shown below. This service will check the IAMP4 service and generate an alert if the server doesn't respond within 5 seconds or if the response from the server doesn't contain “mygreatmailserver.com".
 
   
 ::

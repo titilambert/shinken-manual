@@ -24,8 +24,11 @@ You're done.
 
 //Source:// `Topic on forum`_
 
-<note important>This method has met with limited success, further testing of the NagiosRetention module is required. An issues encountered should be raised in the Shinken issue tracker on github.</note>
+  
+::
 
+   .. important:: This method has met with limited success, further testing of the NagiosRetention module is required. An issues encountered should be raised in the Shinken issue tracker on github.
+  
 
 
 How to to import Nagios reporting data 

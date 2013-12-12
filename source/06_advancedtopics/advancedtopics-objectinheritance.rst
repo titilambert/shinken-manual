@@ -47,7 +47,7 @@ Local Variables vs. Inherited Variables
 ========================================
 
 
-One important thing to understand with inheritance is that “local” object variables always take precedence over variables defined in the template object. Take a look at the following example of two host definitions (not all required variables have been supplied):
+One important thing to understand with inheritance is that “local" object variables always take precedence over variables defined in the template object. Take a look at the following example of two host definitions (not all required variables have been supplied):
 
   
 ::
@@ -139,7 +139,7 @@ You'll notice that the definition of host *bighost3* inherits variables from the
   		                max_check_attempts      3
   		                }
   
-There is no inherent limit on how “deep” inheritance can go, but you'll probably want to limit yourself to at most a few levels in order to maintain sanity.
+There is no inherent limit on how “deep" inheritance can go, but you'll probably want to limit yourself to at most a few levels in order to maintain sanity.
 
 
 
@@ -239,7 +239,7 @@ Cancelling Inheritance of String Values
 ========================================
 
 
-In some cases you may not want your host, service, or contact definitions to inherit values of string variables from the templates they reference. If this is the case, you can specify **“null”** (without quotes) as the value of the variable that you do not want to inherit. Take the following example:
+In some cases you may not want your host, service, or contact definitions to inherit values of string variables from the templates they reference. If this is the case, you can specify **“null"** (without quotes) as the value of the variable that you do not want to inherit. Take the following example:
 
   
 ::
@@ -302,9 +302,9 @@ In this case, the host *linuxserver1* will append the value of its local "hostgr
   	                hostgroups        all-servers,linux-servers,web-servers
   	                }
   
-<note important>If you use a field twice using several templates, the value of the field will be the first one found! 
-In the example above, fields values in all-servers won't we be replaced. Be careful with overlaping field! </note>
-
+   .. important:: If you use a field twice using several templates, the value of the field will be the first one found! 
+   In the example above, fields values in all-servers won't we be replaced. Be careful with overlaping field! 
+  
 
 
 Implied Inheritance 
@@ -315,7 +315,21 @@ Normally you have to either explicitly specify the value of a required variable 
 
 The following table lists the object variables that will be implicitly inherited from related objects if you don't explicitly specify their value in your object definition or inherit them from a template.
 
-^ Object Type ^ Object Variable ^ Implied Source ^
+
+
+======================= ============================================================ =====================================================
+Object Type             Object Variable                                              Implied Source                                       
+**Services**            *contact_groups*                                             *contact_groups* in the associated host definition   
+*notification_interval* *notification_interval* in the associated host definition                                                         
+*notification_period*   *notification_period* in the associated host definition                                                           
+*check_period*          *check_period* in the associated host definition                                                                  
+**Host Escalations**    *contact_groups*                                             *contact_groups* in the associated host definition   
+*notification_interval* *notification_interval* in the associated host definition                                                         
+*escalation_period*     *notification_period* in the associated host definition                                                           
+**Service Escalations** *contact_groups*                                             *contact_groups* in the associated service definition
+*notification_interval* *notification_interval* in the associated service definition                                                      
+*escalation_period*     *notification_period* in the associated service definition                                                        
+======================= ============================================================ =====================================================
 
 
 
@@ -398,8 +412,10 @@ Thus far, all examples of inheritance have shown object definitions inheriting v
   } 
   
 
+
 .. image:: /_static/images///official/images/multiple-templates1.png
    :scale: 90 %
+
 
 
 In the example above, devweb1 is inheriting variables/values from two sources: generic-host and development-server. You'll notice that a check_interval variable is defined in both sources. Since generic-host was the first template specified in devweb1's use directive, its value for the "check_interval" variable is inherited by the devweb1 host. After inheritance, the effective definition of devweb1 would be as follows:
@@ -425,4 +441,10 @@ Precedence With Multiple Inheritance Sources
 
 When you use multiple inheritance sources, it is important to know how Shinken handles variables that are defined in multiple sources. In these cases Shinken will use the variable/value from the first source that is specified in the use directive. Since inheritance sources can themselves inherit variables/values from one or more other sources, it can get tricky to figure out what variable/value pairs take precedence.
 
+
+
+========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================= ====================================================================================
+Consider the following host definition that references three templates:# Development web server  define host{           use        1, 4, 8           host_name  devweb1   		...	   		        }If some of those referenced templates themselves inherit variables/values from one or more other templates, the precendence rules are shown to the right.Testing, trial, and error will help you better understand exactly how things work in complex inheritance situations like this. :-) .. image:: /_static/images///official/images/multiple-templates2.png
+   :scale: 90 %
+========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================= ====================================================================================
 

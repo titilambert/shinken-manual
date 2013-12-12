@@ -14,7 +14,7 @@ Introduction
 =============
 
 
-Shinken supports a feature that does “freshness” checking on the results of host and service checks. The purpose of freshness checking is to ensure that host and service checks are being provided passively by external applications on a regular basis.
+Shinken supports a feature that does “freshness" checking on the results of host and service checks. The purpose of freshness checking is to ensure that host and service checks are being provided passively by external applications on a regular basis.
 
 Freshness checking is useful when you want to ensure that :ref:`passive checks <thebasics-passivechecks>` are being received as frequently as you want. This can be very useful in :ref:`distributed <advancedtopics-distributed>` and :ref:`failover <advancedtopics-redundancy>` monitoring environments.
 
@@ -33,7 +33,7 @@ How Does Freshness Checking Work?
 
   * A freshness threshold is calculated for each host or service.
   * For each host/service, the age of its last check result is compared with the freshness threshold.
-  * If the age of the last check result is greater than the freshness threshold, the check result is considered “stale”.
+  * If the age of the last check result is greater than the freshness threshold, the check result is considered “stale".
   * If the check results is found to be stale, Shinken will force an :ref:`active check <thebasics-activechecks>` of the host or service by executing the command specified by in the host or service definition.
 
 An active check is executed even if active checks are disabled on a program-wide or host- or service-specific basis.
@@ -77,7 +77,7 @@ Here's what the definition for the service might look like (some required option
   		        passive_checks_enabled  1               ; passive checks are enabled (this is how results are reported)
   		        check_freshness         1
   		        freshness_threshold     93600           ; 26 hour threshold, since backups may not always finish at the same time
-  		        check_command           no-backup-report        ; this command is run only if the service results are “stale”
+  		        check_command           no-backup-report        ; this command is run only if the service results are “stale"
   		        ...other options...
   		        }
   

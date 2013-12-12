@@ -115,7 +115,20 @@ Notification Type Macro
 
 When crafting your notification commands, you need to take into account what type of notification is occurring. The :ref:`$NOTIFICATIONTYPE$ <thebasics-macrolist#thebasics-macrolist-notificationtype>` macro contains a string that identifies exactly that. The table below lists the possible values for the macro and their respective descriptions:
 
-^ Value ^ Description ^
+
+
+================= ====================================================================================================================================================================================================================================================================
+Value             Description                                                                                                                                                                                                                                                         
+PROBLEM           A service or host has just entered (or is still in) a problem state. If this is a service notification, it means the service is either in a WARNING, UNKNOWN or CRITICAL state. If this is a host notification, it means the host is in a DOWN or UNREACHABLE state.
+RECOVERY          A service or host recovery has occurred. If this is a service notification, it means the service has just returned to an OK state. If it is a host notification, it means the host has just returned to an UP state.                                                
+ACKNOWLEDGEMENT   This notification is an acknowledgement notification for a host or service problem. Acknowledgement notifications are initiated via the web interface by contacts for the particular host or service.                                                               
+FLAPPINGSTART     The host or service has just started :ref:`flapping <advancedtopics-flapping>`.                                                                                                                                                                                     
+FLAPPINGSTOP      The host or service has just stopped :ref:`flapping <advancedtopics-flapping>`.                                                                                                                                                                                     
+FLAPPINGDISABLED  The host or service has just stopped :ref:`flapping <advancedtopics-flapping>` because flap detection was disabled..                                                                                                                                                
+DOWNTIMESTART     The host or service has just entered a period of :ref:`scheduled downtime <advancedtopics-downtime>`. Future notifications will be supressed.                                                                                                                       
+DOWNTIMESTOP      The host or service has just exited from a period of :ref:`scheduled downtime <advancedtopics-downtime>`. Notifications about problems can now resume.                                                                                                              
+DOWNTIMECANCELLED The period of :ref:`scheduled downtime <advancedtopics-downtime>` for the host or service was just cancelled. Notifications about problems can now resume.                                                                                                          
+================= ====================================================================================================================================================================================================================================================================
 
 
 

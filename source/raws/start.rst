@@ -13,9 +13,12 @@
   * :ref:`Getting help! <] >`
   * :ref:`Global Discussion Page <discussion >`
 
-<note tip>You are welcome to improve this wiki. Simply create an account, login and ask on the forum to get activated for edition. :)</note>
+  
+::
 
-
+   .. tip:: You are welcome to improve this wiki. Simply create an account, login and ask on the forum to get activated for edition. :)
+  
+  
 **Table of Contents**
 
   * :ref:`About <part-about>`
@@ -119,7 +122,7 @@ __Shinken is not related with the official Nagios project nor Nagios Enterprise.
 
 Nagios, the Nagios logo, and Nagios graphics are the servicemarks, trademarks, or registered trademarks owned by Nagios Enterprises. All other servicemarks and trademarks are the property of their respective owner.·
 
-Shinken is provided “AS IS” with “NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.”
+Shinken is provided “AS IS" with “NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE."
 
 Copyright © 1999-2007 Ethan Galstad, Nagios Enterprises
 Copyright © 2007-2009 Sébastien Guilbaud and Olivier Jan
