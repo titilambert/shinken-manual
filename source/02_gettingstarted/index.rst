@@ -17,6 +17,7 @@ Getting Started
     gettingstarted-quickstart-gnulinux
     gettingstarted-quickstart-nokia
     gettingstarted-quickstart-windows
+    ch07
     gettingstarted-monitoring-windows
     gettingstarted-monitoring-linux
     gettingstarted-monitoring-printers

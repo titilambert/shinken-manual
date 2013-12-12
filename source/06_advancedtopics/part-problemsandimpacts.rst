@@ -15,9 +15,9 @@ What is this correlation ?
 
 The main role of this feature is to allow users to have the same correlation views in the console than they got in the notifications.
 
-From now, users won’t get notified if there was a dependency problem or example (a host in DOWN make the service notifications to not be send for example). But in the console, we still got some green and red indicators: the scheduler waited for actual checks to put the elements in a UNKNOWN or UNREACHABLE state when he already know that there was a dependency problem.
+From now, users won"t get notified if there was a dependency problem or example (a host in DOWN make the service notifications to not be send for example). But in the console, we still got some green and red indicators: the scheduler waited for actual checks to put the elements in a UNKNOWN or UNREACHABLE state when he already know that there was a dependency problem.
 
-Now it’s smart enough to put such states to elements that we know the check will fail. An example?
+Now it"s smart enough to put such states to elements that we know the check will fail. An example?
 
 Imagine such a parent relations between hosts:
 
@@ -26,9 +26,10 @@ Imagine such a parent relations between hosts:
    :scale: 90 %
 
 
+
 If gw is DOWN, all checks for others elements will put UNREACHABLE state. But if the fw and servers are checks 5 minutes later, during this period, the console will still have green indicators for them. And are they really green? No. We know that future checks will put them in errors. That why the problems/impacts feature do: when the gateway is set in HARD/DOWN, it apply a UNREACHABLE (and UNKNOWN for services) states for others elements below. So the administrators in front of his desk saw directly that there is a problem, and what are the elements impacted.
 
-It’s important to see that such state change do not interfere with the HARD/SOFT logic: it’s just a state change for console, but it’s not taken into account as a checks attempt.
+It"s important to see that such state change do not interfere with the HARD/SOFT logic: it"s just a state change for console, but it"s not taken into account as a checks attempt.
 
 
 Here gateway is already in DOWN/HARD. We can see that all servers do not have an output: they are not already checked, but we already set the UNREACHABLE state. When they will be checks, there will be an output and they will keep this state.
