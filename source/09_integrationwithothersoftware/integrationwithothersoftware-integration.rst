@@ -21,10 +21,7 @@ Integration Points
 ===================
 
 
-  
-::
-
-   .. important:: This diagram is deprecated and illustrates legacy Nagios. Which has nothing to do with the new architecture. eck.
+.. important::  This diagram is deprecated and illustrates legacy Nagios. Which has nothing to do with the new architecture. eck.
 
 
 .. image:: /_static/images///official/images/integrationoverview.png

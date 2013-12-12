@@ -3,8 +3,9 @@
 
 
 
-= Part VII. Security and Performance Tuning =
-=============================================
+==========================================
+Part VII. Security and Performance Tuning 
+==========================================
 
 
 **Table of Contents**

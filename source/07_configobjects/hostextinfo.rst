@@ -2,8 +2,9 @@
 
 
 
-= Extended Host Information Definition =
-========================================
+=====================================
+Extended Host Information Definition 
+=====================================
 
 
 
@@ -14,11 +15,8 @@ Description
 
 Extended host information entries are basically used to make the output from the status, statusmap, statuswrl, and extinfo CGIs look pretty. They have no effect on monitoring and are completely optional.
 
-  
-::
+.. note::  Tip: As of Nagios 3.x, all directives contained in extended host information definitions are also available in host definitions. Thus, you can choose to define the directives below in your host definitions if it makes your configuration simpler. Separate extended host information definitions will continue to be supported for backward compatability.
 
-   .. note:: Tip: As of Nagios 3.x, all directives contained in extended host information definitions are also available in host definitions. Thus, you can choose to define the directives below in your host definitions if it makes your configuration simpler. Separate extended host information definitions will continue to be supported for backward compatability.
-  
 
 
 Definition Format 

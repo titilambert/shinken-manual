@@ -3,8 +3,9 @@
 
 
 
-= Part IX. Nagios/Shinken Addons =
-==================================
+===============================
+Part IX. Nagios/Shinken Addons 
+===============================
 
 
 **Table of Contents**

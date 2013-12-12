@@ -3,8 +3,9 @@
 
 
 
-= Part III. Configuring Shinken =
-=================================
+==============================
+Part III. Configuring Shinken 
+==============================
 
 
 **Table of Contents**

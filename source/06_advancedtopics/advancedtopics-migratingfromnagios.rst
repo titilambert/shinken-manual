@@ -2,8 +2,9 @@
 
 
 
-= Migrating from Nagios to Shinken =
-====================================
+=================================
+Migrating from Nagios to Shinken 
+=================================
 
 
 
@@ -24,11 +25,8 @@ You're done.
 
 //Source:// `Topic on forum`_
 
-  
-::
+.. important::  This method has met with limited success, further testing of the NagiosRetention module is required. An issues encountered should be raised in the Shinken issue tracker on github.
 
-   .. important:: This method has met with limited success, further testing of the NagiosRetention module is required. An issues encountered should be raised in the Shinken issue tracker on github.
-  
 
 
 How to to import Nagios reporting data 

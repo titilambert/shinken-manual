@@ -3,8 +3,9 @@
 
 
 
-= Part VIII. Integration With Other Software =
-==============================================
+===========================================
+Part VIII. Integration With Other Software 
+===========================================
 
 
 **Table of Contents**

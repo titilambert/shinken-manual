@@ -26,10 +26,7 @@ Before Shinken executes a command, it will replace any macros it finds in the co
 
 Certain macros may themselves contain other macros. These include the "$HOSTNOTES$", "$HOSTNOTESURL$", "$HOSTACTIONURL$", "$SERVICENOTES$", "$SERVICENOTESURL$", and "$SERVICEACTIONURL$" macros.
 
-  
-::
-
-   .. tip:: If, you need to have the '$' character in one of your command (and not referring to a macro), please put "$$" instead. Shinken will replace it well
+.. tip::  If, you need to have the '$' character in one of your command (and not referring to a macro), please put "$$" instead. Shinken will replace it well
 
 
 Example 1: Host Address Macro 

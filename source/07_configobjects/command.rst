@@ -2,8 +2,9 @@
 
 
 
-= Command Definition =
-======================
+===================
+Command Definition 
+===================
 
 
 
@@ -14,11 +15,8 @@ Description
 
 A command definition is just that. It defines a command. Commands that can be defined include service checks, service notifications, service event handlers, host checks, host notifications, and host event handlers. Command definitions can contain :ref:`macros <thebasics-macros>`, but you must make sure that you include only those macros that are “valid" for the circumstances when the command will be used. More information on what macros are available and when they are “valid" can be found :ref:`here <thebasics-macros>`. The different arguments to a command definition are outlined below.
 
-  
-::
+.. tip::  If, you need to have the '$' character in one of your command (and not referring to a macro), please put "$$" instead. Shinken will replace it well
 
-   .. tip:: If, you need to have the '$' character in one of your command (and not referring to a macro), please put "$$" instead. Shinken will replace it well
-  
 
 
 Definition Format 

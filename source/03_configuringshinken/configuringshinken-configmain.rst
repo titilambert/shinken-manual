@@ -325,11 +325,8 @@ This is the rotation method that you would like Shinken to use for your log file
   * d = Daily (rotate the log at midnight each day)
   * w = Weekly (rotate the log at midnight on Saturday)
   * m = Monthly (rotate the log at midnight on the last day of the month)
-  
-::
+.. tip::  From now, only the d (Daily) parameter is managed. 
 
-   .. tip:: From now, only the d (Daily) parameter is managed. 
-  
 
 
 External Command Check Option 
@@ -351,11 +348,8 @@ This option determines whether or not Shinken will check the :ref:`External Comm
   * 0 = Don't check external commands (default)
   * 1 = Check external commands (default)
 
-  
-::
+.. note::  FIX ME : Find the real default value
 
-   .. note:: FIX ME : Find the real default value
-  
 
 
 External Command File 
@@ -376,12 +370,9 @@ Example:
   
 This is the file that Shinken will check for external commands to process with the **arbiter daemon**. The :ref:`command CGI <thebasics-cgis#thebasics-cgis-cmd_cgi>` writes commands to this file. The external command file is implemented as a named pipe (FIFO), which is created when Nagios starts and removed when it shuts down. More information on external commands can be found :ref:`here <advancedtopics-extcommands>`.
 
-  
-::
+.. tip::  This external command file is not managed under Windows system. Please use others way to send commands like the LiveStatus module for example.
 
-   .. tip:: This external command file is not managed under Windows system. Please use others way to send commands like the LiveStatus module for example.
-  
-  
+
 
 
 Arbiter Lock File 
@@ -417,11 +408,8 @@ This option determines whether or not Shinken will retain state information for 
   * 0 = Don't retain state information
   * 1 = Retain state information (default)
 
-  
-::
+.. note::  Idea to approve : Mark it as Unused : ` Related topic`_. A Shinken module replace it.
 
-   .. note:: Idea to approve : Mark it as Unused : ` Related topic`_. A Shinken module replace it.
-  
 
 
 State Retention File 
@@ -441,11 +429,8 @@ Example:
   
 This is the file that Shinken **scheduler daemons** will use for storing status, downtime, and comment information before they shuts down. When Shinken is restarted it will use the information stored in this file for setting the initial states of services and hosts before it starts monitoring anything. In order to make Shinken retain state information between program restarts, you must enable the :ref:`State Retention Option <configuringshinken-configmain#configuringshinken-configmain-retain_state_information>` option.
 
-  
-::
+.. important::  The file format is not the same between Shinken and Nagios! The retention.dat generated with Nagios will not load into Shinken.
 
-   .. important:: The file format is not the same between Shinken and Nagios! The retention.dat generated with Nagios will not load into Shinken.
-  
 
 
 Automatic State Retention Update Interval 
@@ -590,11 +575,8 @@ This variable determines whether messages are logged to the syslog facility on y
   * 0 = Don't use syslog facility
   * 1 = Use syslog facility
 
-  
-::
+.. tip::  This is a Unix Os only option.
 
-   .. tip:: This is a Unix Os only option.
-  
 
 
 Notification Logging Option 
@@ -788,11 +770,8 @@ This is the number of seconds per “unit interval" used for timing in the sched
 
 The default value for this is set to 60, which means that a "unit value" of 1 in the object configuration file will mean 60 seconds (1 minute). 
 
-  
-::
+.. tip::  Set this option top 1 is not a good thing with Shinken. It's not design to be a hard real time (<5seconds) monitoring system. Nearly no one need such hard real time (maybe only the Nuclear center or a market place like the London Exchange...).
 
-   .. tip:: Set this option top 1 is not a good thing with Shinken. It's not design to be a hard real time (<5seconds) monitoring system. Nearly no one need such hard real time (maybe only the Nuclear center or a market place like the London Exchange...).
-  
 
 
 Tuning and advanced parameters 

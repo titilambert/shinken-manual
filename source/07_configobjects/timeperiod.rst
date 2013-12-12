@@ -2,8 +2,9 @@
 
 
 
-= Time Period Definition =
-==========================
+=======================
+Time Period Definition 
+=======================
 
 
 
@@ -124,7 +125,4 @@ You can specify several different types of exceptions to the standard rotating w
 This directive is used to specify the short names of other timeperiod definitions whose time ranges should be excluded from this timeperiod. Multiple timeperiod names should be separated with a comma.
 
 
-  
-::
-
-   .. note:: The day skip functionality is not managed from now, so it's like all is / 1 
+.. note::  The day skip functionality is not managed from now, so it's like all is / 1 

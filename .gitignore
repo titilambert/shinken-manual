@@ -1,2 +1,4 @@
 build
+tools/media
+tools/pages
 *.swp

@@ -2,8 +2,9 @@
 
 
 
-= Shinken Official Documentation =
-==================================
+===============================
+Shinken Official Documentation 
+===============================
 
 
   * :ref:`Getting started <start>`
@@ -13,12 +14,9 @@
   * :ref:`Getting help! <] >`
   * :ref:`Global Discussion Page <discussion >`
 
-  
-::
+.. tip::  You are welcome to improve this wiki. Simply create an account, login and ask on the forum to get activated for edition. :)
 
-   .. tip:: You are welcome to improve this wiki. Simply create an account, login and ask on the forum to get activated for edition. :)
-  
-  
+
 **Table of Contents**
 
   * :ref:`About <part-about>`

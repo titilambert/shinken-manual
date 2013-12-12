@@ -41,11 +41,8 @@ It's a simple service (or a host) with a "special" check_command named bp_rule. 
 
 This makes it compatible with all your current habits and UIs. As the service aggregation is considered as any other state from a host or service, you can get notifications, actions and escalations. This means you can have contacts that will receive only the relevant notifications based on their role.
 
-  
-::
+.. warning::  You do not have to define "bp_rule" command, it's purely internal. You should NOT define it in you checkcommands.cfg file, or the configuration will be invalid due to duplicate commands!
 
-   .. warning:: You do not have to define "bp_rule" command, it's purely internal. You should NOT define it in you checkcommands.cfg file, or the configuration will be invalid due to duplicate commands!
-  
 Here is a configuration for the ERP service example, attached to a dummy host named "servicedelivery".
 
   
@@ -64,11 +61,8 @@ Here is a configuration for the ERP service example, attached to a dummy host na
 
 That's all!
 
-  
-::
+.. note::  A complete service delivery view should include an aggregated view of the end user availability perspective states, end user performance perspective states, IT component states, application error states, application performance states. This aggregated state can then be used as a metric for Service Management (basis for defining an SLA).
 
-   .. note:: A complete service delivery view should include an aggregated view of the end user availability perspective states, end user performance perspective states, IT component states, application error states, application performance states. This aggregated state can then be used as a metric for Service Management (basis for defining an SLA).
-  
 
 
 With "need at least X elements" clusters 

@@ -35,8 +35,8 @@ Starting Shinken
   linux:~ # /usr/local/shinken/bin/shinken-broker -d -c /usr/local/shinken/etc/brokerd.ini
   linux:~ # /usr/local/shinken/bin/shinken-arbiter -d -c /usr/local/shinken/etc/nagios.cfg -c /usr/local/shinken/etc/shinken-specific.cfg
   
-   .. important:: Enabling debugging output under windows requires changing registry values associated with Shinken
-  
+.. important::  Enabling debugging output under windows requires changing registry values associated with Shinken
+
 
 
 Restarting Shinken 

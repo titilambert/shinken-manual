@@ -76,11 +76,8 @@ To make your life a bit easier, a few configuration tasks have already been done
 
 The above-mentioned config files can be found in the "/etc/shinken/objects/" directory. You can modify the definitions in these and other definitions to suit your needs better if you'd like. However, I'd recommend waiting until you're more familiar with configuring Shinken before doing so. For the time being, just follow the directions outlined below and you'll be monitoring your network routers/switches in no time.
 
-  
-::
+.. important::  The commands are in fact not included yet in commands.cfg
 
-   .. important:: The commands are in fact not included yet in commands.cfg
-  
 
 
 Prerequisites 

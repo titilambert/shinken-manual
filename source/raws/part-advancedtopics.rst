@@ -3,8 +3,9 @@
 
 
 
-= Part VI. Advanced Topics =
-============================
+=========================
+Part VI. Advanced Topics 
+=========================
 
 
 **Table of Contents**

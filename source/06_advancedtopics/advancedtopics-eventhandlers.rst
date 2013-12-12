@@ -67,10 +67,7 @@ You can specify global event handler commands by using the :ref:`global_host_eve
 Individual hosts and services can have their own event handler command that should be run to handle state changes. You can specify an event handler that should be run by using the "event_handler" directive in your :ref:`host <configuringshinken/configobjects/host>` and :ref:`service <configuringshinken/configobjects/service>` definitions. These host- and service-specific event handlers are executed immediately after the (optional) global host or service event handler is executed.
 
 
-  
-::
-
-   .. important:: Global event handlers are currently not launched as of April 2013: https://github.com/naparuba/shinken/issues/717
+.. important::  Global event handlers are currently not launched as of April 2013: https://github.com/naparuba/shinken/issues/717
 
 
 Enabling Event Handlers 

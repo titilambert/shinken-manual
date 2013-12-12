@@ -5,12 +5,9 @@
 Tuning and advanced parameters 
 -------------------------------
 
-  
-::
-
-   .. important:: If you do not know how to change the values of theses parameters, don't touch them :)
+.. important::  If you do not know how to change the values of theses parameters, don't touch them :)
    (and ask for help on the mailing list).
-  
+
 
 
 Performance data parameters 
@@ -360,12 +357,9 @@ Example:
   
 This option determines the maximum amount of time (in seconds) that the state of a previous host check is considered current. Cached host states (from host/service checks that were performed more recently than the time specified by this value) can improve host check performance immensely. Too high of a value for this option may result in (temporarily) inaccurate host/service states, while a low value may result in a performance hit for host/service checks. Use a value of 0 if you want to disable host/service check caching. More information on cached checks can be found :ref:`here <advancedtopics-cachedchecks>`.
 
-  
-::
+.. tip::  Nagios default is 15s, but it's a tweak that make checks less accurate. So Shinken use 0s as a default. If you have performances problems and you can't add a new scheduler or poller, increase this value and start to buy a new server because this won't be magical.
 
-   .. tip:: Nagios default is 15s, but it's a tweak that make checks less accurate. So Shinken use 0s as a default. If you have performances problems and you can't add a new scheduler or poller, increase this value and start to buy a new server because this won't be magical.
-  
-  
+
 
 
 Large Installation Tweaks Option 

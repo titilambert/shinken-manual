@@ -302,9 +302,9 @@ In this case, the host *linuxserver1* will append the value of its local "hostgr
   	                hostgroups        all-servers,linux-servers,web-servers
   	                }
   
-   .. important:: If you use a field twice using several templates, the value of the field will be the first one found! 
+.. important::  If you use a field twice using several templates, the value of the field will be the first one found! 
    In the example above, fields values in all-servers won't we be replaced. Be careful with overlaping field! 
-  
+
 
 
 Implied Inheritance 

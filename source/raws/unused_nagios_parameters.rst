@@ -3,14 +3,11 @@
 
 The parameters below are managed in Nagios but not in Shinken because they are useless in the architecture. If you really need one of them, please use Nagios instead or send us a patch :)
 
-  
-::
-
-   .. note:: The title is quite ambiguous : a not implemented parameter is different from an unused parameter. 
+.. note::  The title is quite ambiguous : a not implemented parameter is different from an unused parameter. 
    
    The difference has been done in this page, why about creating a not_implemented_nagios_parameters? 
-  
-  
+
+
 
 
 External Command Check Interval (Unused) 
@@ -226,11 +223,8 @@ Maximum Check Result Reaper Time
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-  
-::
+.. note::  Is it Unused or Not Implemeted?? 
 
-   .. note:: Is it Unused or Not Implemeted?? 
-  
 
 
 ======== ======================================

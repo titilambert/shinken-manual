@@ -40,11 +40,8 @@ Volatile services differ from “normal" services in three important ways. Each 
 
 These events normally only occur for services when they are in a non-OK state and a hard state change has just occurred. In other words, they only happen the first time that a service goes into a non-OK state. If future checks of the service result in the same non-OK state, no hard state change occurs and none of the events mentioned take place again.
 
-  
-::
+.. tip::  If you are only interested in logging, consider using :ref:`stalking <advancedtopics-stalking>` options instead.
 
-   .. tip:: If you are only interested in logging, consider using :ref:`stalking <advancedtopics-stalking>` options instead.
-  
 
 
 The Power Of Two 

@@ -3,8 +3,9 @@
 
 
 
-= Part IV. Running Shinken =
-============================
+=========================
+Part IV. Running Shinken 
+=========================
 
 
 **Table of Contents**
